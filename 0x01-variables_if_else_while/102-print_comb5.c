@@ -3,15 +3,15 @@
 /**
  * main - Entry point
  *
- * Description:
+ * Description: printing
  *
  * Return: 0
 */
 
 int main(void)
 {
-	int ch1 = 0, ch2:
-	
+	int ch1 = 0, ch2;
+
 	while (ch1 <= 99)
 	{
 		ch2 = ch1;
@@ -25,7 +25,7 @@ int main(void)
 				putchar((ch2 / 10) + 48);
 				putchar((ch2 %  10) + 48);
 
-				if ( ch1 != 98 || ch2 != 99)
+				if (ch1 != 98 || ch2 != 99)
 				{
 					putchar(',');
 					putchar(' ');
