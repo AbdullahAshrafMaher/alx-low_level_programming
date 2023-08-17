@@ -1,18 +1,16 @@
 #include "main.h"
 /**
-*print_numbers - function that verifies if a  character is a digit or not
+*print_numbers - function that print all numbers from
+*0 to 9
 *
-*Return: nothing
+*Return: returns nothing
 */
-
 void print_numbers(void)
 {
-	int i = '0';
-
-	for (; i <= '9';)
-	{
-		_putchar(i);
-		i++;
-	}
-	_putchar(10);
+int number = 48;
+for (number = 48; number < 58; number++)
+{
+_putchar(number);
+}
+_putchar(10);
 }
