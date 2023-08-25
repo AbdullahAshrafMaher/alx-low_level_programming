@@ -1,45 +1,36 @@
 #include "main.h"
 
 /**
- * rot13 -  encodes a string using rot13
- * @str:the string targeted
- * Return: the encoded string
+ *rot13 - encodes strings using rot13.
+ *@s: pointer to string.
  *
-*/
-
-char *rot13(char *str)
+ *Return: pointer to encoded string.
+ */
+char *rot13(char *s)
 {
-	int i, j;
+	int stringCount, rotate;
+	char x[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+		     'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
+		     'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
+		     'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y',
+		     'Z'};
 
-	char alphabet[52] = {'A', 'B', 'C', 'D', 'E', 'F',
-				 'G', 'H', 'I', 'J', 'K', 'L',
-				 'M', 'N', 'O', 'P', 'Q', 'R',
-				 'S', 'T', 'U', 'V', 'W', 'X',
-				 'Y', 'Z', 'a', 'b', 'c', 'd',
-				 'e', 'f', 'g', 'h', 'i', 'j',
-				 'k', 'l', 'm', 'n', 'o', 'p',
-				 'q', 'r', 's', 't', 'u', 'v',
-				 'w', 'x', 'y', 'z'};
+	char y[] = {'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
+		     'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+		     'm', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y',
+		     'Z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
+		     'M'};
 
-	char rot13key[52] = {'N', 'O', 'P', 'Q', 'R', 'S',
-				 'T', 'U', 'V', 'W', 'X', 'Y',
-				 'Z', 'A', 'B', 'C', 'D', 'E',
-				 'F', 'G', 'H', 'I', 'J', 'K',
-				 'L', 'M', 'n', 'o', 'p', 'q',
-				 'r', 's', 't', 'u', 'v', 'w',
-				 'x', 'y', 'z', 'a', 'b', 'c',
-				 'd', 'e', 'f', 'g', 'h', 'i',
-				 'j', 'k', 'l', 'm'};
-	while (str[++i])
+	for (stringCount = 0; s[stringCount] != '\0'; stringCount++)
 	{
-		for (j = 0; j < 52; j++)
+		for (rotate = 0; rotate < 53; rotate++)
 		{
-			if (str[i] == alphabet[j])
+			if (x[rotate] == s[stringCount])
 			{
-				str[i] = rot13key[j];
+				s[stringCount] = y[rotate];
 				break;
 			}
 		}
 	}
-	return (str);
+	return (s);
 }
