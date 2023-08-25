@@ -1,14 +1,9 @@
 #include "main.h"
-
 /**
- * cap_string -  capitalizes the given string
- *
- * @str: string to be capitalized
- *
- * Return: the capitalized string.
- *
+*cap_string - function that capitalize first character of a word
+*@str: string to capitalize
+*Return:returns the capitalized string
 */
-
 char *cap_string(char *str)
 {
 	int index = 0;
