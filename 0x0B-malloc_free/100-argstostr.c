@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * argstostr -  concatenates all the given arguments 
+ * argstostr -  concatenates all the given arguments
  *
  * @ac: count of args passed to the function
  * @av: array of arguments
