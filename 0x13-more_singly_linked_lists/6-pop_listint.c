@@ -22,4 +22,4 @@ free(popped);
 *head = (*head)->next;
 return (content);
 
-}
+}}
